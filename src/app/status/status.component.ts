@@ -9,11 +9,14 @@ import { StatusService } from '../status.service';
 })
 export class StatusComponent implements OnInit {
 statuses: Status[];
-dateNow : Date = new Date();
+dateNow: Date;
+
 
 constructor(private statusService: StatusService) { }
 ngOnInit() { 
   this.getStatuses();
+  this.dateNow = new Date();
+  this.dateNow.setDate( this.dateNow.getDate() + 3 );
 }
 
 getStatuses(): void {

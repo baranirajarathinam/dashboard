@@ -19,6 +19,6 @@
            
     </td>
     <td><span class="badge"><div *ngIf=status.recording> Recording in progress</div><div *ngIf=!status.recording> Scheduled</div></span>  </td>
-    <td><div *ngIf=status.recording> Now</div><div *ngIf=!status.recording>{{dateNow | date: 'dd/MM/yyyy hh:mm:ss'}}</div></td>
+    <td><div *ngIf=status.recording> Now</div><div *ngIf=!status.recording>{{dateNow+1 | date: 'dd/MM/yyyy hh:mm:ss'}}</div></td>
   </tr>
 </table>
