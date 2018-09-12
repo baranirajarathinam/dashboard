@@ -1,0 +1,24 @@
+<h2>Status of Recoding</h2>
+
+<!--ul class="status">
+  <li *ngFor="let status of statuses; let i = index" [class.selected]="status === selectedStatus" (click)="onSelect(status)">
+    {{status.title}} || {{status.genre}}|| {{status.director}} || <span class="badge"><div *ngIf=status.recording> Recording in progress</div><div *ngIf=!status.recording> Scheduled</div></span>
+  </li>
+</ul>-->
+<table class="status">
+  <tr>
+      <th>Title</th><th>Description</th><th>Recording Status</th><th>Schedule</th>
+  </tr>
+  <tr *ngFor="let status of statuses; let i = index" [class.selected]="status === selectedStatus" (click)="onSelect(status)">
+    <td><img width="150" src="{{status.image}}"></td>
+    <td>Movie title : {{status.title}}<br>
+              Year  :  {{status.year}}<br>
+           director : {{status.director}}<br>
+           cast : {{status.cast}}<br>
+           genre : {{status.genre}}<br>
+           
+    </td>
+    <td><span class="badge"><div *ngIf=status.recording> Recording in progress</div><div *ngIf=!status.recording> Scheduled</div></span>  </td>
+    <td><div *ngIf=status.recording> Now</div><div *ngIf=!status.recording>{{dateNow | date: 'dd/MM/yyyy hh:mm:ss'}}</div></td>
+  </tr>
+</table>
