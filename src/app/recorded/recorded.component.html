@@ -1,0 +1,19 @@
+<h2>Recorded Programs</h2>
+
+<!--ul class="status">
+  <li *ngFor="let status of statuses; let i = index" [class.selected]="status === selectedStatus" (click)="onSelect(status)">
+    {{status.title}} || {{status.genre}}|| {{status.director}} || <span class="badge"><div *ngIf=status.recording> Recording in progress</div><div *ngIf=!status.recording> Scheduled</div></span>
+  </li>
+</ul>-->
+<table class="status">
+  <tr>
+      <th>Title</th><th>Play Video</th>
+  </tr>
+  <tr *ngFor="let status of statuses; let i = index" [class.selected]="status === selectedStatus" (click)="onSelect(status)">
+    <td><img width="150" src="{{status.image}}"></td>
+    <td><iframe width="560" height="315" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
+           
+    </td>
+    
+  </tr>
+</table>
