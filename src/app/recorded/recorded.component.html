@@ -9,11 +9,11 @@
   <tr>
       <th>Title</th><th>Play Video</th><th>Recorded Date</th>
   </tr>
-  <tr *ngFor="let status of statuses; let i = index" [class.selected]="status === selectedStatus" (click)="onSelect(status)">
-    <td><img width="150" src="{{status.image}}"></td>
+  <tr *ngFor="let recording of recordings; let i = index" [class.selected]="recordings === selectedRecordings" (click)="onSelect(recordings)">
+    <td><img width="150" src="{{recording.image}}"></td>
     <td><iframe width="560" height="315" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
            
-    </td>
-    <td>{{status.genre}}</td>
+    </td><!--<td>test</td>-->
+    <td>{{recording.recordedDate}}</td>
   </tr>
 </table>

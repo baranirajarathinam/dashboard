@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatusComponent } from './status/status.component';
 import { RecordedComponent } from './recorded/recorded.component';
+import { SetupComponent } from './setup/setup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RecordedComponent } from './recorded/recorded.component';
     MessagesComponent,
     DashboardComponent,
     StatusComponent,
-    RecordedComponent
+    RecordedComponent,
+    SetupComponent
   ],
   imports: [
     BrowserModule,
